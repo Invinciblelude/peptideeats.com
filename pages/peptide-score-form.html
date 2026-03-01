@@ -36,75 +36,84 @@
 
     <section class="section">
       <div class="container">
-        <form class="form-grid">
+        <form
+          class="form-grid"
+          action="https://formspree.io/f/mbdaeqqj"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="_next"
+            value="https://peptideeats.com/pages/payment-success.html"
+          />
           <div class="card">
             <h3>Section 1 — Who you are</h3>
             <label>
               Full name
-              <input type="text" required />
+              <input type="text" name="Full name" required />
             </label>
             <label>
               Email address (report delivered here)
-              <input type="email" required />
+              <input type="email" name="Email" required />
             </label>
             <div class="grid grid-3">
               <label>
                 Age
-                <input type="number" min="1" />
+                <input type="number" name="Age" min="1" />
               </label>
               <label>
                 Height
-                <input type="text" placeholder="e.g., 5'10&quot;" />
+                <input type="text" name="Height" placeholder="e.g., 5'10&quot;" />
               </label>
               <label>
                 Current weight
-                <input type="text" placeholder="e.g., 180 lbs" />
+                <input type="text" name="Current weight" placeholder="e.g., 180 lbs" />
               </label>
             </div>
             <label>
               Goal weight (if different)
-              <input type="text" />
+              <input type="text" name="Goal weight" />
             </label>
             <label>
               City / State
-              <input type="text" />
+              <input type="text" name="City / State" />
             </label>
             <label>
               How did you hear about PeptideEats?
-              <input type="text" placeholder="Facebook, Instagram, etc." />
+              <input type="text" name="Referral" placeholder="Facebook, Instagram, etc." />
             </label>
           </div>
 
           <div class="card">
             <h3>Section 2 — Your health goals</h3>
             <p class="muted">Check everything that applies.</p>
-            <label><input type="checkbox" /> Lose weight / reduce body fat</label>
-            <label><input type="checkbox" /> Lose belly fat specifically</label>
-            <label><input type="checkbox" /> Build lean muscle</label>
-            <label><input type="checkbox" /> Tone without bulking</label>
-            <label><input type="checkbox" /> Maintain current weight</label>
-            <label><input type="checkbox" /> More energy throughout the day</label>
-            <label><input type="checkbox" /> Stop crashing after meals</label>
-            <label><input type="checkbox" /> Perform better at the gym</label>
-            <label><input type="checkbox" /> Faster workout recovery</label>
-            <label><input type="checkbox" /> Improve endurance or stamina</label>
-            <label><input type="checkbox" /> Reduce joint or tendon pain</label>
-            <label><input type="checkbox" /> Improve gut health / stop bloating</label>
-            <label><input type="checkbox" /> Strengthen immune system</label>
-            <label><input type="checkbox" /> Heal from an injury faster</label>
-            <label><input type="checkbox" /> Manage blood sugar / diabetes</label>
-            <label><input type="checkbox" /> Better mental focus and clarity</label>
-            <label><input type="checkbox" /> Reduce anxiety or stress</label>
-            <label><input type="checkbox" /> Improve mood and motivation</label>
-            <label><input type="checkbox" /> Better quality sleep</label>
-            <label><input type="checkbox" /> Reduce brain fog</label>
-            <label><input type="checkbox" /> Improve skin</label>
-            <label><input type="checkbox" /> Strengthen hair</label>
-            <label><input type="checkbox" /> Look younger and feel vibrant</label>
-            <label><input type="checkbox" /> Slow down aging</label>
+            <label><input type="checkbox" name="Lose weight" value="Yes" /> Lose weight / reduce body fat</label>
+            <label><input type="checkbox" name="Lose belly fat" value="Yes" /> Lose belly fat specifically</label>
+            <label><input type="checkbox" name="Build muscle" value="Yes" /> Build lean muscle</label>
+            <label><input type="checkbox" name="Tone without bulking" value="Yes" /> Tone without bulking</label>
+            <label><input type="checkbox" name="Maintain weight" value="Yes" /> Maintain current weight</label>
+            <label><input type="checkbox" name="More energy" value="Yes" /> More energy throughout the day</label>
+            <label><input type="checkbox" name="Stop crashing" value="Yes" /> Stop crashing after meals</label>
+            <label><input type="checkbox" name="Gym performance" value="Yes" /> Perform better at the gym</label>
+            <label><input type="checkbox" name="Workout recovery" value="Yes" /> Faster workout recovery</label>
+            <label><input type="checkbox" name="Endurance" value="Yes" /> Improve endurance or stamina</label>
+            <label><input type="checkbox" name="Joint pain" value="Yes" /> Reduce joint or tendon pain</label>
+            <label><input type="checkbox" name="Gut health" value="Yes" /> Improve gut health / stop bloating</label>
+            <label><input type="checkbox" name="Immune system" value="Yes" /> Strengthen immune system</label>
+            <label><input type="checkbox" name="Heal injury" value="Yes" /> Heal from an injury faster</label>
+            <label><input type="checkbox" name="Blood sugar" value="Yes" /> Manage blood sugar / diabetes</label>
+            <label><input type="checkbox" name="Mental focus" value="Yes" /> Better mental focus and clarity</label>
+            <label><input type="checkbox" name="Anxiety stress" value="Yes" /> Reduce anxiety or stress</label>
+            <label><input type="checkbox" name="Mood" value="Yes" /> Improve mood and motivation</label>
+            <label><input type="checkbox" name="Sleep quality" value="Yes" /> Better quality sleep</label>
+            <label><input type="checkbox" name="Brain fog" value="Yes" /> Reduce brain fog</label>
+            <label><input type="checkbox" name="Improve skin" value="Yes" /> Improve skin</label>
+            <label><input type="checkbox" name="Strengthen hair" value="Yes" /> Strengthen hair</label>
+            <label><input type="checkbox" name="Look younger" value="Yes" /> Look younger and feel vibrant</label>
+            <label><input type="checkbox" name="Slow aging" value="Yes" /> Slow down aging</label>
             <label>
               #1 goal above all others
-              <input type="text" />
+              <input type="text" name="Top goal" />
             </label>
           </div>
 
@@ -113,134 +122,127 @@
             <p class="muted">0 = Never, 5 = Every day.</p>
             <label>
               Fatigue / low energy despite sleeping
-              <input type="number" min="0" max="5" />
+              <input type="number" name="Fatigue" min="0" max="5" />
             </label>
             <label>
               Mid‑afternoon energy crash
-              <input type="number" min="0" max="5" />
+              <input type="number" name="Energy crash" min="0" max="5" />
             </label>
             <label>
               Feeling hungry 1–2 hrs after eating
-              <input type="number" min="0" max="5" />
+              <input type="number" name="Hungry after eating" min="0" max="5" />
             </label>
             <label>
               Stubborn belly fat that won’t budge
-              <input type="number" min="0" max="5" />
+              <input type="number" name="Belly fat" min="0" max="5" />
             </label>
             <label>
               Slow metabolism / weight gain easily
-              <input type="number" min="0" max="5" />
+              <input type="number" name="Slow metabolism" min="0" max="5" />
             </label>
             <label>
               Bloating after meals
-              <input type="number" min="0" max="5" />
+              <input type="number" name="Bloating" min="0" max="5" />
             </label>
             <label>
               Gas, cramping, or irregular bowels
-              <input type="number" min="0" max="5" />
+              <input type="number" name="Gas cramping" min="0" max="5" />
             </label>
             <label>
               Acid reflux or heartburn
-              <input type="number" min="0" max="5" />
+              <input type="number" name="Acid reflux" min="0" max="5" />
             </label>
             <label>
               Food sensitivities / reactions
-              <input type="number" min="0" max="5" />
+              <input type="number" name="Food sensitivities" min="0" max="5" />
             </label>
             <label>
               Poor digestion / feel heavy after eating
-              <input type="number" min="0" max="5" />
+              <input type="number" name="Poor digestion" min="0" max="5" />
             </label>
           </div>
 
           <div class="card">
             <h3>Section 4 — Current diet (0–7 times/week)</h3>
-            <label>Salmon or fatty fish <input type="number" min="0" max="7" /></label>
-            <label>Chicken or turkey <input type="number" min="0" max="7" /></label>
-            <label>Red meat <input type="number" min="0" max="7" /></label>
-            <label>Eggs <input type="number" min="0" max="7" /></label>
-            <label>Greek yogurt or cottage cheese <input type="number" min="0" max="7" /></label>
-            <label>Beans / lentils / chickpeas <input type="number" min="0" max="7" /></label>
-            <label>Tofu / tempeh / edamame <input type="number" min="0" max="7" /></label>
-            <label>Protein shakes or powder <input type="number" min="0" max="7" /></label>
-            <label>Bone broth or soups <input type="number" min="0" max="7" /></label>
-            <label>Fermented foods <input type="number" min="0" max="7" /></label>
-            <label>Garlic or ginger <input type="number" min="0" max="7" /></label>
-            <label>Turmeric <input type="number" min="0" max="7" /></label>
-            <label>Leafy greens <input type="number" min="0" max="7" /></label>
-            <label>Broccoli or cauliflower <input type="number" min="0" max="7" /></label>
-            <label>Bell peppers <input type="number" min="0" max="7" /></label>
-            <label>Mushrooms <input type="number" min="0" max="7" /></label>
-            <label>Sweet potato / squash <input type="number" min="0" max="7" /></label>
-            <label>Asparagus / artichokes <input type="number" min="0" max="7" /></label>
-            <label>Berries <input type="number" min="0" max="7" /></label>
-            <label>Citrus fruits <input type="number" min="0" max="7" /></label>
-            <label>Avocado <input type="number" min="0" max="7" /></label>
-            <label>Dark chocolate <input type="number" min="0" max="7" /></label>
-            <label>Oats or oatmeal <input type="number" min="0" max="7" /></label>
-            <label>Quinoa <input type="number" min="0" max="7" /></label>
-            <label>Brown or wild rice <input type="number" min="0" max="7" /></label>
-            <label>Whole grain bread/pasta <input type="number" min="0" max="7" /></label>
-            <label>Chia or flax <input type="number" min="0" max="7" /></label>
-            <label>Nuts <input type="number" min="0" max="7" /></label>
-            <label>Fast food meals <input type="number" min="0" max="7" /></label>
-            <label>Ultra‑processed snacks <input type="number" min="0" max="7" /></label>
-            <label>Sugary drinks <input type="number" min="0" max="7" /></label>
-            <label>White bread/rice/pasta <input type="number" min="0" max="7" /></label>
-            <label>Alcohol (drinks/week) <input type="number" min="0" max="30" /></label>
-            <label>Fried foods <input type="number" min="0" max="7" /></label>
-            <label>Sugary desserts <input type="number" min="0" max="7" /></label>
+            <label>Salmon or fatty fish <input type="number" name="Salmon" min="0" max="7" /></label>
+            <label>Chicken or turkey <input type="number" name="Chicken" min="0" max="7" /></label>
+            <label>Red meat <input type="number" name="Red meat" min="0" max="7" /></label>
+            <label>Eggs <input type="number" name="Eggs" min="0" max="7" /></label>
+            <label>Greek yogurt or cottage cheese <input type="number" name="Greek yogurt" min="0" max="7" /></label>
+            <label>Beans / lentils / chickpeas <input type="number" name="Beans" min="0" max="7" /></label>
+            <label>Tofu / tempeh / edamame <input type="number" name="Tofu" min="0" max="7" /></label>
+            <label>Protein shakes or powder <input type="number" name="Protein shakes" min="0" max="7" /></label>
+            <label>Bone broth or soups <input type="number" name="Bone broth" min="0" max="7" /></label>
+            <label>Fermented foods <input type="number" name="Fermented" min="0" max="7" /></label>
+            <label>Garlic or ginger <input type="number" name="Garlic ginger" min="0" max="7" /></label>
+            <label>Turmeric <input type="number" name="Turmeric" min="0" max="7" /></label>
+            <label>Leafy greens <input type="number" name="Leafy greens" min="0" max="7" /></label>
+            <label>Broccoli or cauliflower <input type="number" name="Broccoli" min="0" max="7" /></label>
+            <label>Bell peppers <input type="number" name="Bell peppers" min="0" max="7" /></label>
+            <label>Mushrooms <input type="number" name="Mushrooms" min="0" max="7" /></label>
+            <label>Sweet potato / squash <input type="number" name="Sweet potato" min="0" max="7" /></label>
+            <label>Asparagus / artichokes <input type="number" name="Asparagus" min="0" max="7" /></label>
+            <label>Berries <input type="number" name="Berries" min="0" max="7" /></label>
+            <label>Citrus fruits <input type="number" name="Citrus" min="0" max="7" /></label>
+            <label>Avocado <input type="number" name="Avocado" min="0" max="7" /></label>
+            <label>Dark chocolate <input type="number" name="Dark chocolate" min="0" max="7" /></label>
+            <label>Oats or oatmeal <input type="number" name="Oats" min="0" max="7" /></label>
+            <label>Quinoa <input type="number" name="Quinoa" min="0" max="7" /></label>
+            <label>Brown or wild rice <input type="number" name="Brown rice" min="0" max="7" /></label>
+            <label>Whole grain bread/pasta <input type="number" name="Whole grain" min="0" max="7" /></label>
+            <label>Chia or flax <input type="number" name="Chia flax" min="0" max="7" /></label>
+            <label>Nuts <input type="number" name="Nuts" min="0" max="7" /></label>
+            <label>Fast food meals <input type="number" name="Fast food" min="0" max="7" /></label>
+            <label>Ultra‑processed snacks <input type="number" name="Processed snacks" min="0" max="7" /></label>
+            <label>Sugary drinks <input type="number" name="Sugary drinks" min="0" max="7" /></label>
+            <label>White bread/rice/pasta <input type="number" name="White bread" min="0" max="7" /></label>
+            <label>Alcohol (drinks/week) <input type="number" name="Alcohol" min="0" max="30" /></label>
+            <label>Fried foods <input type="number" name="Fried foods" min="0" max="7" /></label>
+            <label>Sugary desserts <input type="number" name="Sugary desserts" min="0" max="7" /></label>
           </div>
 
           <div class="card">
             <h3>Section 5 — Eating habits</h3>
-            <label>Meals per day <input type="text" placeholder="1, 2, 3, or 4+" /></label>
-            <label>Breakfast within 2 hours? <input type="text" /></label>
-            <label>Eat after 8 PM regularly? <input type="text" /></label>
-            <label>Time between last meal and bedtime <input type="text" /></label>
-            <label>Water per day <input type="text" /></label>
-            <label>Meal prep at home? <input type="text" /></label>
-            <label>Diet quality right now <input type="text" /></label>
-            <label>Biggest challenge <input type="text" /></label>
+            <label>Meals per day <input type="text" name="Meals per day" placeholder="1, 2, 3, or 4+" /></label>
+            <label>Breakfast within 2 hours? <input type="text" name="Breakfast" /></label>
+            <label>Eat after 8 PM regularly? <input type="text" name="Eat after 8pm" /></label>
+            <label>Time between last meal and bedtime <input type="text" name="Meal to bedtime" /></label>
+            <label>Water per day <input type="text" name="Water" /></label>
+            <label>Meal prep at home? <input type="text" name="Meal prep" /></label>
+            <label>Diet quality right now <input type="text" name="Diet quality" /></label>
+            <label>Biggest challenge <input type="text" name="Biggest challenge" /></label>
           </div>
 
           <div class="card">
             <h3>Section 6 — Lifestyle</h3>
-            <label>Activity level <input type="text" /></label>
-            <label>Exercise type <input type="text" /></label>
-            <label>Sleep hours <input type="text" /></label>
-            <label>Sleep quality <input type="text" /></label>
-            <label>Stress level <input type="text" /></label>
-            <label>Smoker / tobacco use <input type="text" /></label>
+            <label>Activity level <input type="text" name="Activity level" /></label>
+            <label>Exercise type <input type="text" name="Exercise type" /></label>
+            <label>Sleep hours <input type="text" name="Sleep hours" /></label>
+            <label>Sleep quality <input type="text" name="Sleep quality" /></label>
+            <label>Stress level <input type="text" name="Stress level" /></label>
+            <label>Smoker / tobacco use <input type="text" name="Tobacco" /></label>
           </div>
 
           <div class="card">
             <h3>Section 7 — Supplements & medications</h3>
-            <label>Supplements used <input type="text" /></label>
-            <label>Currently on GLP‑1 medication? <input type="text" /></label>
-            <label>Diagnosed medical conditions <input type="text" /></label>
-            <label>Pregnant or breastfeeding? <input type="text" /></label>
-            <label>Prescription medications affecting diet? <input type="text" /></label>
+            <label>Supplements used <input type="text" name="Supplements" /></label>
+            <label>Currently on GLP‑1 medication? <input type="text" name="GLP-1" /></label>
+            <label>Diagnosed medical conditions <input type="text" name="Conditions" /></label>
+            <label>Pregnant or breastfeeding? <input type="text" name="Pregnant" /></label>
+            <label>Prescription medications affecting diet? <input type="text" name="Prescription meds" /></label>
           </div>
 
           <div class="card">
             <h3>Section 8 — Food allergies</h3>
-            <label>Food allergies <input type="text" /></label>
-            <label>Dietary preferences <input type="text" /></label>
+            <label>Food allergies <input type="text" name="Food allergies" /></label>
+            <label>Dietary preferences <input type="text" name="Dietary preferences" /></label>
           </div>
 
           <div class="cta">
             <strong>Submit your questionnaire</strong>
-            <p class="muted">
-              This form does not auto‑send without a backend. For now, please
-              click the button below to email your answers to us.
-            </p>
-            <button class="btn btn-primary" id="emailAnswers" type="button">
-              Email my answers
+            <button class="btn btn-primary" type="submit">
+              Submit
             </button>
-            <p class="muted">
-              If you prefer, copy and paste your answers into an email.
-            </p>
           </div>
         </form>
       </div>
@@ -261,28 +263,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      function buildMailBody(formElement) {
-        const fields = Array.from(formElement.querySelectorAll("input, textarea"));
-        return fields
-          .map((field) => {
-            const label = field.closest("label");
-            const labelText = label ? label.childNodes[0].textContent.trim() : field.name || "Field";
-            const value = field.value ? field.value.trim() : "";
-            return `${labelText}: ${value}`;
-          })
-          .join("\n");
-      }
-
-      const emailButton = document.getElementById("emailAnswers");
-      const form = document.querySelector("form");
-
-      emailButton.addEventListener("click", () => {
-        const body = buildMailBody(form);
-        const subject = encodeURIComponent("Peptide Score Questionnaire");
-        const bodyEncoded = encodeURIComponent(body);
-        window.location.href = `mailto:VinceDang@thenetwork20.com?subject=${subject}&body=${bodyEncoded}`;
-      });
-    </script>
   </body>
 </html>
