@@ -235,11 +235,9 @@
               This form does not auto‑send without a backend. For now, please
               click the button below to email your answers to us.
             </p>
-            <a
-              class="btn btn-primary"
-              href="mailto:VinceDang@thenetwork20.com?subject=Peptide%20Score%20Questionnaire"
-              >Email my answers</a
-            >
+            <button class="btn btn-primary" id="emailAnswers" type="button">
+              Email my answers
+            </button>
             <p class="muted">
               If you prefer, copy and paste your answers into an email.
             </p>
@@ -263,5 +261,28 @@
         </div>
       </div>
     </footer>
+    <script>
+      function buildMailBody(formElement) {
+        const fields = Array.from(formElement.querySelectorAll("input, textarea"));
+        return fields
+          .map((field) => {
+            const label = field.closest("label");
+            const labelText = label ? label.childNodes[0].textContent.trim() : field.name || "Field";
+            const value = field.value ? field.value.trim() : "";
+            return `${labelText}: ${value}`;
+          })
+          .join("\n");
+      }
+
+      const emailButton = document.getElementById("emailAnswers");
+      const form = document.querySelector("form");
+
+      emailButton.addEventListener("click", () => {
+        const body = buildMailBody(form);
+        const subject = encodeURIComponent("Peptide Score Questionnaire");
+        const bodyEncoded = encodeURIComponent(body);
+        window.location.href = `mailto:VinceDang@thenetwork20.com?subject=${subject}&body=${bodyEncoded}`;
+      });
+    </script>
   </body>
 </html>
