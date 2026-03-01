@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Peptide Score Questionnaire — PeptideEats</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="../index.html">PeptideEats</a>
+        <nav class="nav-links">
+          <a href="protocols.html">Protocols</a>
+          <a href="peptide-score.html">$10 Peptide Score</a>
+          <a href="meal-plans.html">Meal Plans</a>
+          <a href="subscribe.html">Subscribe</a>
+          <a href="blog.html">Education</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-header">
+      <div class="container">
+        <h1>My Peptide Score™ Questionnaire</h1>
+        <p class="muted">
+          Complete this after payment. Your report is delivered within 24 hours.
+        </p>
+        <div class="notice">
+          Educational use only. This is not medical advice.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form class="form-grid">
+          <div class="card">
+            <h3>Section 1 — Who you are</h3>
+            <label>
+              Full name
+              <input type="text" required />
+            </label>
+            <label>
+              Email address (report delivered here)
+              <input type="email" required />
+            </label>
+            <div class="grid grid-3">
+              <label>
+                Age
+                <input type="number" min="1" />
+              </label>
+              <label>
+                Height
+                <input type="text" placeholder="e.g., 5'10&quot;" />
+              </label>
+              <label>
+                Current weight
+                <input type="text" placeholder="e.g., 180 lbs" />
+              </label>
+            </div>
+            <label>
+              Goal weight (if different)
+              <input type="text" />
+            </label>
+            <label>
+              City / State
+              <input type="text" />
+            </label>
+            <label>
+              How did you hear about PeptideEats?
+              <input type="text" placeholder="Facebook, Instagram, etc." />
+            </label>
+          </div>
+
+          <div class="card">
+            <h3>Section 2 — Your health goals</h3>
+            <p class="muted">Check everything that applies.</p>
+            <label><input type="checkbox" /> Lose weight / reduce body fat</label>
+            <label><input type="checkbox" /> Lose belly fat specifically</label>
+            <label><input type="checkbox" /> Build lean muscle</label>
+            <label><input type="checkbox" /> Tone without bulking</label>
+            <label><input type="checkbox" /> Maintain current weight</label>
+            <label><input type="checkbox" /> More energy throughout the day</label>
+            <label><input type="checkbox" /> Stop crashing after meals</label>
+            <label><input type="checkbox" /> Perform better at the gym</label>
+            <label><input type="checkbox" /> Faster workout recovery</label>
+            <label><input type="checkbox" /> Improve endurance or stamina</label>
+            <label><input type="checkbox" /> Reduce joint or tendon pain</label>
+            <label><input type="checkbox" /> Improve gut health / stop bloating</label>
+            <label><input type="checkbox" /> Strengthen immune system</label>
+            <label><input type="checkbox" /> Heal from an injury faster</label>
+            <label><input type="checkbox" /> Manage blood sugar / diabetes</label>
+            <label><input type="checkbox" /> Better mental focus and clarity</label>
+            <label><input type="checkbox" /> Reduce anxiety or stress</label>
+            <label><input type="checkbox" /> Improve mood and motivation</label>
+            <label><input type="checkbox" /> Better quality sleep</label>
+            <label><input type="checkbox" /> Reduce brain fog</label>
+            <label><input type="checkbox" /> Improve skin</label>
+            <label><input type="checkbox" /> Strengthen hair</label>
+            <label><input type="checkbox" /> Look younger and feel vibrant</label>
+            <label><input type="checkbox" /> Slow down aging</label>
+            <label>
+              #1 goal above all others
+              <input type="text" />
+            </label>
+          </div>
+
+          <div class="card">
+            <h3>Section 3 — Your symptoms (0–5)</h3>
+            <p class="muted">0 = Never, 5 = Every day.</p>
+            <label>
+              Fatigue / low energy despite sleeping
+              <input type="number" min="0" max="5" />
+            </label>
+            <label>
+              Mid‑afternoon energy crash
+              <input type="number" min="0" max="5" />
+            </label>
+            <label>
+              Feeling hungry 1–2 hrs after eating
+              <input type="number" min="0" max="5" />
+            </label>
+            <label>
+              Stubborn belly fat that won’t budge
+              <input type="number" min="0" max="5" />
+            </label>
+            <label>
+              Slow metabolism / weight gain easily
+              <input type="number" min="0" max="5" />
+            </label>
+            <label>
+              Bloating after meals
+              <input type="number" min="0" max="5" />
+            </label>
+            <label>
+              Gas, cramping, or irregular bowels
+              <input type="number" min="0" max="5" />
+            </label>
+            <label>
+              Acid reflux or heartburn
+              <input type="number" min="0" max="5" />
+            </label>
+            <label>
+              Food sensitivities / reactions
+              <input type="number" min="0" max="5" />
+            </label>
+            <label>
+              Poor digestion / feel heavy after eating
+              <input type="number" min="0" max="5" />
+            </label>
+          </div>
+
+          <div class="card">
+            <h3>Section 4 — Current diet (0–7 times/week)</h3>
+            <label>Salmon or fatty fish <input type="number" min="0" max="7" /></label>
+            <label>Chicken or turkey <input type="number" min="0" max="7" /></label>
+            <label>Red meat <input type="number" min="0" max="7" /></label>
+            <label>Eggs <input type="number" min="0" max="7" /></label>
+            <label>Greek yogurt or cottage cheese <input type="number" min="0" max="7" /></label>
+            <label>Beans / lentils / chickpeas <input type="number" min="0" max="7" /></label>
+            <label>Tofu / tempeh / edamame <input type="number" min="0" max="7" /></label>
+            <label>Protein shakes or powder <input type="number" min="0" max="7" /></label>
+            <label>Bone broth or soups <input type="number" min="0" max="7" /></label>
+            <label>Fermented foods <input type="number" min="0" max="7" /></label>
+            <label>Garlic or ginger <input type="number" min="0" max="7" /></label>
+            <label>Turmeric <input type="number" min="0" max="7" /></label>
+            <label>Leafy greens <input type="number" min="0" max="7" /></label>
+            <label>Broccoli or cauliflower <input type="number" min="0" max="7" /></label>
+            <label>Bell peppers <input type="number" min="0" max="7" /></label>
+            <label>Mushrooms <input type="number" min="0" max="7" /></label>
+            <label>Sweet potato / squash <input type="number" min="0" max="7" /></label>
+            <label>Asparagus / artichokes <input type="number" min="0" max="7" /></label>
+            <label>Berries <input type="number" min="0" max="7" /></label>
+            <label>Citrus fruits <input type="number" min="0" max="7" /></label>
+            <label>Avocado <input type="number" min="0" max="7" /></label>
+            <label>Dark chocolate <input type="number" min="0" max="7" /></label>
+            <label>Oats or oatmeal <input type="number" min="0" max="7" /></label>
+            <label>Quinoa <input type="number" min="0" max="7" /></label>
+            <label>Brown or wild rice <input type="number" min="0" max="7" /></label>
+            <label>Whole grain bread/pasta <input type="number" min="0" max="7" /></label>
+            <label>Chia or flax <input type="number" min="0" max="7" /></label>
+            <label>Nuts <input type="number" min="0" max="7" /></label>
+            <label>Fast food meals <input type="number" min="0" max="7" /></label>
+            <label>Ultra‑processed snacks <input type="number" min="0" max="7" /></label>
+            <label>Sugary drinks <input type="number" min="0" max="7" /></label>
+            <label>White bread/rice/pasta <input type="number" min="0" max="7" /></label>
+            <label>Alcohol (drinks/week) <input type="number" min="0" max="30" /></label>
+            <label>Fried foods <input type="number" min="0" max="7" /></label>
+            <label>Sugary desserts <input type="number" min="0" max="7" /></label>
+          </div>
+
+          <div class="card">
+            <h3>Section 5 — Eating habits</h3>
+            <label>Meals per day <input type="text" placeholder="1, 2, 3, or 4+" /></label>
+            <label>Breakfast within 2 hours? <input type="text" /></label>
+            <label>Eat after 8 PM regularly? <input type="text" /></label>
+            <label>Time between last meal and bedtime <input type="text" /></label>
+            <label>Water per day <input type="text" /></label>
+            <label>Meal prep at home? <input type="text" /></label>
+            <label>Diet quality right now <input type="text" /></label>
+            <label>Biggest challenge <input type="text" /></label>
+          </div>
+
+          <div class="card">
+            <h3>Section 6 — Lifestyle</h3>
+            <label>Activity level <input type="text" /></label>
+            <label>Exercise type <input type="text" /></label>
+            <label>Sleep hours <input type="text" /></label>
+            <label>Sleep quality <input type="text" /></label>
+            <label>Stress level <input type="text" /></label>
+            <label>Smoker / tobacco use <input type="text" /></label>
+          </div>
+
+          <div class="card">
+            <h3>Section 7 — Supplements & medications</h3>
+            <label>Supplements used <input type="text" /></label>
+            <label>Currently on GLP‑1 medication? <input type="text" /></label>
+            <label>Diagnosed medical conditions <input type="text" /></label>
+            <label>Pregnant or breastfeeding? <input type="text" /></label>
+            <label>Prescription medications affecting diet? <input type="text" /></label>
+          </div>
+
+          <div class="card">
+            <h3>Section 8 — Food allergies</h3>
+            <label>Food allergies <input type="text" /></label>
+            <label>Dietary preferences <input type="text" /></label>
+          </div>
+
+          <div class="cta">
+            <strong>Submit your questionnaire</strong>
+            <p class="muted">
+              This form does not auto‑send without a backend. For now, please
+              click the button below to email your answers to us.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="mailto:VinceDang@thenetwork20.com?subject=Peptide%20Score%20Questionnaire"
+              >Email my answers</a
+            >
+            <p class="muted">
+              If you prefer, copy and paste your answers into an email.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <strong>PeptideEats</strong>
+        <p class="muted">
+          Nutrition education and meal service. Not medical advice.
+        </p>
+        <div class="footer-links">
+          <a href="../legal/terms.html">Terms</a>
+          <a href="../legal/privacy.html">Privacy</a>
+          <a href="../legal/medical-disclaimer.html">Medical Disclaimer</a>
+          <a href="../legal/allergy-waiver.html">Allergy Waiver</a>
+          <a href="../legal/legal-summary.html">Legal &amp; Safety</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
