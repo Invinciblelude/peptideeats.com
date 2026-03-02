@@ -10,14 +10,15 @@
     <header class="nav">
       <div class="container nav-inner">
         <a class="brand" href="../index.html">PeptideEats</a>
+        <button class="nav-toggle" aria-label="Menu" type="button"></button>
         <nav class="nav-links">
+          <a href="peptide-library.html">Library</a>
           <a href="protocols.html">Protocols</a>
-          <a href="peptide-score.html">$10 Peptide Score</a>
+          <a href="peptide-score.html">Food-First Plan</a>
           <a href="meal-plans.html">Meal Plans</a>
+          <a href="nutrition-guide.html">Nutrition Guide</a>
           <a href="subscribe.html">Subscribe</a>
-          <a href="blog.html">Education</a>
           <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
@@ -37,34 +38,33 @@
         <div>
           <h2 class="section-title">Send a message</h2>
           <p class="muted">Email: VinceDang@thenetwork20.com</p>
-          <form class="form-grid">
+          <form class="form-grid" action="https://formspree.io/f/mbdaeqqj" method="POST">
+            <input type="hidden" name="_subject" value="Contact: PeptideEats" />
             <label>
               Name
-              <input type="text" placeholder="Your name" />
+              <input type="text" name="name" placeholder="Your name" required />
             </label>
             <label>
               Email
-              <input type="email" placeholder="you@email.com" />
+              <input type="email" name="email" placeholder="you@email.com" required />
             </label>
             <label>
               Topic
-              <select>
-                <option>Peptide Score</option>
-                <option>Subscriptions</option>
-                <option>Meal plans</option>
-                <option>Allergies</option>
-                <option>Other</option>
+              <select name="topic">
+                <option value="Peptide Score">Peptide Score</option>
+                <option value="Subscriptions">Subscriptions</option>
+                <option value="Meal plans">Meal plans</option>
+                <option value="Allergies">Allergies</option>
+                <option value="Other">Other</option>
               </select>
             </label>
             <label>
               Message
-              <textarea rows="5" placeholder="How can we help?"></textarea>
+              <textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
             </label>
-            <button class="btn btn-primary" type="button">Send message</button>
+            <button class="btn btn-primary" type="submit">Send message</button>
           </form>
-          <p class="muted">
-            Replace this form with your email provider or contact tool.
-          </p>
+          <p class="muted">We’ll reply within 24–48 hours.</p>
         </div>
         <div class="card">
           <h3>FAQ</h3>
@@ -100,13 +100,23 @@
           Nutrition education and meal service. Not medical advice.
         </p>
         <div class="footer-links">
+          <a href="blog.html">Education</a>
+          <a href="nutrition-guide.html">Nutrition Guide</a>
+          <a href="for-busy.html">For Busy</a>
+          <a href="safety-legal.html">Safety</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links footer-legal">
           <a href="../legal/terms.html">Terms</a>
           <a href="../legal/privacy.html">Privacy</a>
-          <a href="../legal/medical-disclaimer.html">Medical Disclaimer</a>
-          <a href="../legal/allergy-waiver.html">Allergy Waiver</a>
-          <a href="../legal/legal-summary.html">Legal &amp; Safety</a>
+          <a href="../legal/medical-disclaimer.html">Disclaimer</a>
         </div>
       </div>
     </footer>
+    <script>
+      document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+        document.querySelector('.nav-links')?.classList.toggle('open');
+      });
+    </script>
   </body>
 </html>

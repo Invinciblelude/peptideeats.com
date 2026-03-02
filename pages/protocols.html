@@ -10,14 +10,15 @@
     <header class="nav">
       <div class="container nav-inner">
         <a class="brand" href="../index.html">PeptideEats</a>
+        <button class="nav-toggle" aria-label="Menu" type="button"></button>
         <nav class="nav-links">
+          <a href="peptide-library.html">Library</a>
           <a href="protocols.html">Protocols</a>
-          <a href="peptide-score.html">$10 Peptide Score</a>
+          <a href="peptide-score.html">Food-First Plan</a>
           <a href="meal-plans.html">Meal Plans</a>
+          <a href="nutrition-guide.html">Nutrition Guide</a>
           <a href="subscribe.html">Subscribe</a>
-          <a href="blog.html">Education</a>
           <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
@@ -149,11 +150,11 @@
       <div class="cta">
         <strong>Not sure where to start?</strong>
         <p class="muted">
-          Take the $10 Peptide Score and we’ll recommend the best protocol for
+          Take the Food-First Plan and we’ll recommend the best protocol for
           your goals.
         </p>
         <a class="btn btn-primary" href="peptide-score.html"
-          >Get My Peptide Score</a
+          >Get My Food-First Plan</a
         >
       </div>
     </section>
@@ -165,13 +166,23 @@
           Nutrition education and meal service. Not medical advice.
         </p>
         <div class="footer-links">
+          <a href="blog.html">Education</a>
+          <a href="nutrition-guide.html">Nutrition Guide</a>
+          <a href="for-busy.html">For Busy</a>
+          <a href="safety-legal.html">Safety</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links footer-legal">
           <a href="../legal/terms.html">Terms</a>
           <a href="../legal/privacy.html">Privacy</a>
-          <a href="../legal/medical-disclaimer.html">Medical Disclaimer</a>
-          <a href="../legal/allergy-waiver.html">Allergy Waiver</a>
-          <a href="../legal/legal-summary.html">Legal &amp; Safety</a>
+          <a href="../legal/medical-disclaimer.html">Disclaimer</a>
         </div>
       </div>
     </footer>
+    <script>
+      document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+        document.querySelector('.nav-links')?.classList.toggle('open');
+      });
+    </script>
   </body>
 </html>

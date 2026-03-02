@@ -10,14 +10,15 @@
     <header class="nav">
       <div class="container nav-inner">
         <a class="brand" href="../index.html">PeptideEats</a>
+        <button class="nav-toggle" aria-label="Menu" type="button"></button>
         <nav class="nav-links">
+          <a href="peptide-library.html">Library</a>
           <a href="protocols.html">Protocols</a>
-          <a href="peptide-score.html">$10 Peptide Score</a>
+          <a href="peptide-score.html">Food-First Plan</a>
           <a href="meal-plans.html">Meal Plans</a>
+          <a href="nutrition-guide.html">Nutrition Guide</a>
           <a href="subscribe.html">Subscribe</a>
-          <a href="blog.html">Education</a>
           <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
@@ -155,7 +156,7 @@
 
         <aside class="sidebar">
           <div class="card">
-            <h3>Get the $10 Peptide Score</h3>
+            <h3>Get the Food-First Plan</h3>
             <p class="muted">
               We’ll identify your top nutrition gaps and recommend the best
               protocol to start.
@@ -169,12 +170,13 @@
             <p class="muted">
               Get protocol tips and new recipes every week.
             </p>
-            <div class="input-group">
-              <input type="text" placeholder="First name" />
-              <input type="email" placeholder="Email address" />
-              <button class="btn btn-outline" type="button">Subscribe</button>
-            </div>
-            <p class="muted">Replace this with your email provider form.</p>
+            <form class="input-group" action="https://formspree.io/f/mbdaeqqj" method="POST">
+              <input type="hidden" name="_subject" value="Newsletter signup: PeptideEats (Education)" />
+              <input type="text" name="first_name" placeholder="First name" required />
+              <input type="email" name="email" placeholder="Email address" required />
+              <button class="btn btn-outline" type="submit">Subscribe</button>
+            </form>
+            <p class="muted">Protocol tips and new recipes. No spam.</p>
           </div>
           <div class="card">
             <h3>Browse by goal</h3>
@@ -200,13 +202,23 @@
           Nutrition education and meal service. Not medical advice.
         </p>
         <div class="footer-links">
+          <a href="blog.html">Education</a>
+          <a href="nutrition-guide.html">Nutrition Guide</a>
+          <a href="for-busy.html">For Busy</a>
+          <a href="safety-legal.html">Safety</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links footer-legal">
           <a href="../legal/terms.html">Terms</a>
           <a href="../legal/privacy.html">Privacy</a>
-          <a href="../legal/medical-disclaimer.html">Medical Disclaimer</a>
-          <a href="../legal/allergy-waiver.html">Allergy Waiver</a>
-          <a href="../legal/legal-summary.html">Legal &amp; Safety</a>
+          <a href="../legal/medical-disclaimer.html">Disclaimer</a>
         </div>
       </div>
     </footer>
+    <script>
+      document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+        document.querySelector('.nav-links')?.classList.toggle('open');
+      });
+    </script>
   </body>
 </html>
