@@ -23,6 +23,7 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -169,9 +170,114 @@ img {
 
 .hero {
   padding: 100px 0 80px;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  background: linear-gradient(135deg, #0a0e1a 0%, #0f172a 40%, #131c2e 60%, #0a0e1a 100%);
   color: #f1f5f9;
   overflow: hidden;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 35%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 40% 8%, rgba(255,255,255,0.8) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 45%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 55%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 65%, rgba(255,255,255,0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 80%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 50% 70%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 65% 85%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 75%, rgba(255,255,255,0.55) 0%, transparent 100%),
+    radial-gradient(1px 1px at 92% 30%, rgba(255,255,255,0.45) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5% 90%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 45% 25%, rgba(255,255,255,0.65) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 50%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 50%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 60%, rgba(255,255,255,0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 88% 10%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 92%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 95% 88%, rgba(255,255,255,0.55) 0%, transparent 100%);
+  animation: stars-twinkle 6s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes stars-twinkle {
+  0%   { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.hero-sun {
+  position: absolute;
+  top: 8%;
+  right: 6%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fde68a 0%, #fbbf24 30%, rgba(251,191,36,0) 70%);
+  box-shadow: 0 0 40px 15px rgba(251, 191, 36, 0.15), 0 0 80px 30px rgba(251, 191, 36, 0.08);
+  z-index: 0;
+  animation: sun-pulse 8s ease-in-out infinite;
+}
+
+@keyframes sun-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50%      { transform: scale(1.1); opacity: 0.9; }
+}
+
+.hero-asteroid {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-asteroid::after {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 1px;
+  background: linear-gradient(to left, rgba(255,255,255,0.4), transparent);
+}
+
+.hero-asteroid--1 {
+  top: 20%;
+  left: -5%;
+  animation: asteroid-fly 12s linear infinite 2s;
+}
+
+.hero-asteroid--2 {
+  top: 60%;
+  left: -5%;
+  animation: asteroid-fly 18s linear infinite 7s;
+}
+
+.hero-asteroid--3 {
+  top: 40%;
+  left: -5%;
+  animation: asteroid-fly 15s linear infinite 11s;
+}
+
+@keyframes asteroid-fly {
+  0%   { transform: translateX(0) translateY(0); opacity: 0; }
+  5%   { opacity: 0.7; }
+  90%  { opacity: 0.7; }
+  100% { transform: translateX(110vw) translateY(-40px); opacity: 0; }
 }
 
 .hero .pill {
@@ -331,7 +437,7 @@ img {
 }
 
 .grid-2 {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
 }
 
 .grid-4 {
@@ -911,10 +1017,8 @@ img {
 .meal-strip {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 0;
-  overflow: hidden;
+  gap: 4px;
   border-radius: 20px;
-  border: 1px solid var(--border);
   margin: 32px 0;
 }
 
@@ -923,6 +1027,7 @@ img {
   height: 200px;
   object-fit: cover;
   display: block;
+  border-radius: 12px;
 }
 
 .section-accent {
@@ -1066,6 +1171,9 @@ img {
   .meal-strip img {
     height: 140px;
   }
+  .meal-strip img:nth-child(n+4) {
+    grid-column: span 1;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1183,6 +1291,41 @@ img {
   .testimonial-avatar {
     width: 56px;
     height: 56px;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .protocol-card .protocol-img {
+    height: 160px;
+  }
+
+  .table-wrap {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 0 20px;
+  }
+
+  .card > img,
+  .section > .container > img,
+  figure img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .meal-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+  }
+
+  .meal-strip img {
+    height: 120px;
+    border-radius: 8px;
+  }
+
+  .meal-strip img:last-child {
+    grid-column: 1 / -1;
   }
 
   .founder-strip-grid {
