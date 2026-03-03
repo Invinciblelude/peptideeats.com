@@ -40,10 +40,12 @@
         </p>
 
         <div class="hero-earth" style="max-width: 700px; margin: 0 auto 48px;">
-          <img
-            src="assets/earth-health-crisis.jpg"
-            alt="Planet Earth showing the global reach of diet-related disease"
-          />
+          <div class="earth-globe">
+            <img
+              src="assets/earth-health-crisis.jpg"
+              alt="Planet Earth showing the global reach of diet-related disease"
+            />
+          </div>
           <div class="earth-stat earth-stat--red">
             <div class="earth-stat-number">11M</div>
             <div class="earth-stat-label">Deaths per year<br>from poor diet</div>
@@ -496,6 +498,60 @@
       document.querySelector('.nav-toggle')?.addEventListener('click', function() {
         document.querySelector('.nav-links')?.classList.toggle('open');
       });
+
+      (function() {
+        var targets = [
+          { el: null, end: '11M', prefix: '', suffix: 'M', count: 11 },
+          { el: null, end: '1 in 5', text: true },
+          { el: null, end: '22%', prefix: '', suffix: '%', count: 22 },
+          { el: null, end: '#1', text: true }
+        ];
+
+        var numbers = document.querySelectorAll('.earth-stat-number');
+        numbers.forEach(function(el, i) {
+          if (targets[i]) {
+            targets[i].el = el;
+            el.textContent = targets[i].text ? '' : '0';
+          }
+        });
+
+        function countUp(t, duration) {
+          if (t.text) {
+            t.el.textContent = t.end;
+            return;
+          }
+          var start = 0, end = t.count, startTime = null;
+          function step(ts) {
+            if (!startTime) startTime = ts;
+            var progress = Math.min((ts - startTime) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var val = Math.round(start + (end - start) * eased);
+            t.el.textContent = (t.prefix || '') + val + (t.suffix || '');
+            if (progress < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }
+
+        var fired = false;
+        var earth = document.querySelector('.hero-earth');
+        if (!earth) return;
+
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting && !fired) {
+              fired = true;
+              document.querySelectorAll('.earth-stat').forEach(function(s) {
+                s.classList.add('visible');
+              });
+              targets.forEach(function(t, i) {
+                setTimeout(function() { countUp(t, 1200); }, 800 + i * 600);
+              });
+            }
+          });
+        }, { threshold: 0.3 });
+
+        observer.observe(earth);
+      })();
     </script>
   </body>
 </html>
