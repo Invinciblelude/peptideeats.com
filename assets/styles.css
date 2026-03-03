@@ -1068,14 +1068,15 @@ img {
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
-  box-shadow: 0 0 40px rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.06);
   animation: earth-orbit 50s linear infinite;
+  -webkit-mask-image: radial-gradient(circle, #000 55%, transparent 72%);
+  mask-image: radial-gradient(circle, #000 55%, transparent 72%);
 }
 
 .earth-globe img {
-  width: 100%;
-  height: 100%;
+  width: 140%;
+  height: 140%;
+  margin: -20% 0 0 -20%;
   object-fit: cover;
   display: block;
 }
