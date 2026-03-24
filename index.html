@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PeptideEats — Health Prevention Through Food</title>
     <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="preload" as="image" href="assets/earth-health-crisis.webp" type="image/webp" />
     <meta
       name="description"
       content="Unhealthy diets cause 11 million early deaths a year. PeptideEats builds the eating routine that money can't buy—so you feel better now and lower your risk of disease for years to come."
@@ -45,10 +46,17 @@
 
         <div class="hero-earth" style="max-width: 700px; margin: 0 auto 48px;">
           <div class="earth-globe">
-            <img
-              src="assets/earth-health-crisis.jpg"
-              alt="Planet Earth showing the global reach of diet-related disease"
-            />
+            <picture>
+              <source srcset="assets/earth-health-crisis.webp" type="image/webp" />
+              <img
+                src="assets/earth-health-crisis.jpg"
+                alt="Planet Earth showing the global reach of diet-related disease"
+                width="900"
+                height="900"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </picture>
           </div>
           <div class="earth-stat earth-stat--red">
             <div class="earth-stat-number">11M</div>
@@ -81,11 +89,18 @@
     <!-- ═══════════════ WAKE-UP IMAGE — FULL BLEED ═══════════════ -->
     <section class="section" style="padding: 0; background: #0f172a;">
       <div class="container" style="max-width: 1320px; padding: 0;">
-        <img
-          src="assets/unhealthy-vs-healthy.jpg"
-          alt="The contrast: fast food and junk on the left, a vibrant healthy meal on the right"
-          style="width: 100%; display: block; max-height: 480px; object-fit: cover;"
-        />
+        <picture>
+          <source srcset="assets/unhealthy-vs-healthy.webp" type="image/webp" />
+          <img
+            src="assets/unhealthy-vs-healthy.jpg"
+            alt="The contrast: fast food and junk on the left, a vibrant healthy meal on the right"
+            style="width: 100%; display: block; max-height: 480px; object-fit: cover;"
+            loading="lazy"
+            decoding="async"
+            width="1600"
+            height="900"
+          />
+        </picture>
       </div>
       <div class="container" style="padding-top: 40px; padding-bottom: 48px; text-align: center;">
         <span class="pill pill-danger" style="font-size: 16px; padding: 10px 22px; margin-bottom: 16px;">Every plate is a choice — and you deserve a better one</span>
@@ -104,11 +119,11 @@
         </p>
 
         <div class="meal-strip">
-          <img src="assets/protocols/protocol-1-ignite.jpg" alt="The Ignite Bowl" />
-          <img src="assets/protocols/protocol-3-glow.jpg" alt="The Glow Plate" />
-          <img src="assets/protocols/protocol-4-recovery.jpg" alt="The Recovery Plate" />
-          <img src="assets/protocols/protocol-7-cellular.jpg" alt="Cellular Boost" />
-          <img src="assets/protocols/protocol-9-brain.jpg" alt="Brain + Body" />
+          <picture><source srcset="assets/protocols/protocol-1-ignite.webp" type="image/webp" /><img src="assets/protocols/protocol-1-ignite.jpg" alt="The Ignite Bowl" loading="lazy" decoding="async" width="700" height="467" /></picture>
+          <picture><source srcset="assets/protocols/protocol-3-glow.webp" type="image/webp" /><img src="assets/protocols/protocol-3-glow.jpg" alt="The Glow Plate" loading="lazy" decoding="async" width="700" height="467" /></picture>
+          <picture><source srcset="assets/protocols/protocol-4-recovery.webp" type="image/webp" /><img src="assets/protocols/protocol-4-recovery.jpg" alt="The Recovery Plate" loading="lazy" decoding="async" width="700" height="467" /></picture>
+          <picture><source srcset="assets/protocols/protocol-7-cellular.webp" type="image/webp" /><img src="assets/protocols/protocol-7-cellular.jpg" alt="Cellular Boost" loading="lazy" decoding="async" width="700" height="467" /></picture>
+          <picture><source srcset="assets/protocols/protocol-9-brain.webp" type="image/webp" /><img src="assets/protocols/protocol-9-brain.jpg" alt="Brain + Body" loading="lazy" decoding="async" width="700" height="467" /></picture>
         </div>
 
         <div class="grid grid-3">
@@ -176,11 +191,18 @@
 
     <!-- ═══════════════ BURNOUT IMAGE SECTION ═══════════════ -->
     <section class="section" style="padding: 0;">
-      <img
-        src="assets/burnout-to-health.jpg"
-        alt="The journey from busy, exhausted routines to organized, vibrant meal prep"
-        style="width: 100%; max-height: 400px; object-fit: cover; display: block;"
-      />
+      <picture>
+        <source srcset="assets/burnout-to-health.webp" type="image/webp" />
+        <img
+          src="assets/burnout-to-health.jpg"
+          alt="The journey from busy, exhausted routines to organized, vibrant meal prep"
+          style="width: 100%; max-height: 400px; object-fit: cover; display: block;"
+          loading="lazy"
+          decoding="async"
+          width="1600"
+          height="900"
+        />
+      </picture>
     </section>
 
     <!-- ═══════════════ SECTION 2 — PEPTIDEEATS HEALTH WHEEL ═══════════════ -->
@@ -197,6 +219,8 @@
             alt="PeptideEats Health Wheel"
             class="wheel-img"
             style="margin-bottom: 40px;"
+            loading="lazy"
+            decoding="async"
           />
         </picture>
         <h3 style="margin-bottom: 24px;">The Six Parts of the PeptideEats Health Wheel</h3>
@@ -248,12 +272,19 @@
         <p class="section-subtitle" style="text-align: center; max-width: 640px; margin-left: auto; margin-right: auto;">
           Every protocol is a meal designed to activate a specific natural peptide pathway in your body. Not just food—food with a purpose.
         </p>
-        <img
-          src="assets/protocol-meals-grid.jpg"
-          alt="Six PeptideEats protocol meals — Ignite, Cleanse, Glow, Recovery, Shield, Cellular Boost"
-          class="full-bleed-img"
-          style="margin-bottom: 32px;"
-        />
+        <picture>
+          <source srcset="assets/protocol-meals-grid.webp" type="image/webp" />
+          <img
+            src="assets/protocol-meals-grid.jpg"
+            alt="Six PeptideEats protocol meals — Ignite, Cleanse, Glow, Recovery, Shield, Cellular Boost"
+            class="full-bleed-img"
+            style="margin-bottom: 32px;"
+            loading="lazy"
+            decoding="async"
+            width="1400"
+            height="788"
+          />
+        </picture>
         <div style="text-align: center;">
           <a class="btn btn-primary btn-large" href="pages/protocols.html">Explore All 10 Protocols</a>
         </div>
@@ -404,7 +435,7 @@
         </p>
         <div class="grid grid-3">
           <div class="card persona-card" style="padding: 0; overflow: hidden;">
-            <img src="assets/persona-busy-builder.jpg" alt="Busy professional walking through office with coffee and phone" style="width: 100%; height: 220px; object-fit: cover; display: block;" />
+            <picture><source srcset="assets/persona-busy-builder.webp" type="image/webp" /><img src="assets/persona-busy-builder.jpg" alt="Busy professional walking through office with coffee and phone" style="width: 100%; height: 220px; object-fit: cover; display: block;" loading="lazy" decoding="async" width="900" height="600" /></picture>
             <div style="padding: 24px;">
               <h3>The Busy Builder</h3>
               <p class="muted">
@@ -413,7 +444,7 @@
             </div>
           </div>
           <div class="card persona-card" style="padding: 0; overflow: hidden;">
-            <img src="assets/persona-rebuilder.jpg" alt="Person reviewing lab results at home, ready to make a health change" style="width: 100%; height: 220px; object-fit: cover; display: block;" />
+            <picture><source srcset="assets/persona-rebuilder.webp" type="image/webp" /><img src="assets/persona-rebuilder.jpg" alt="Person reviewing lab results at home, ready to make a health change" style="width: 100%; height: 220px; object-fit: cover; display: block;" loading="lazy" decoding="async" width="900" height="600" /></picture>
             <div style="padding: 24px;">
               <h3>The Rebuilder</h3>
               <p class="muted">
@@ -422,7 +453,7 @@
             </div>
           </div>
           <div class="card persona-card" style="padding: 0; overflow: hidden;">
-            <img src="assets/persona-longevity.jpg" alt="Active older adult stretching outdoors at golden hour, vibrant and strong" style="width: 100%; height: 220px; object-fit: cover; display: block;" />
+            <picture><source srcset="assets/persona-longevity.webp" type="image/webp" /><img src="assets/persona-longevity.jpg" alt="Active older adult stretching outdoors at golden hour, vibrant and strong" style="width: 100%; height: 220px; object-fit: cover; display: block;" loading="lazy" decoding="async" width="900" height="600" /></picture>
             <div style="padding: 24px;">
               <h3>The Longevity Seeker</h3>
               <p class="muted">
@@ -515,7 +546,7 @@
       <div class="container">
         <div class="founder-strip-grid" style="display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center;">
           <div>
-            <img src="assets/founder-vince-wide.jpg" alt="Vince — PeptideEats founder, Cal Fire helitack firefighter" style="width: 100%; border-radius: 16px; border: 2px solid rgba(52, 211, 153, 0.3); box-shadow: 0 8px 30px rgba(0,0,0,0.3);" />
+            <img src="assets/founder-vince-wide.jpg" alt="Vince — PeptideEats founder, Cal Fire helitack firefighter" style="width: 100%; border-radius: 16px; border: 2px solid rgba(52, 211, 153, 0.3); box-shadow: 0 8px 30px rgba(0,0,0,0.3);" loading="lazy" decoding="async" width="800" height="450" />
           </div>
           <div>
             <p style="color: #34d399; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Built by someone who gets it</p>
