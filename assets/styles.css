@@ -633,6 +633,32 @@ img {
   margin: 16px 0;
 }
 
+.score-donation-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 24px;
+  text-align: left;
+  margin: 24px 0 0;
+}
+
+.score-donation-split h3 {
+  font-size: 17px;
+  margin-bottom: 14px;
+  color: #f1f5f9;
+}
+
+.score-donation-split ul {
+  margin: 0;
+  padding-left: 1.1em;
+  color: #cbd5e1;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.score-donation-split .not-list {
+  color: #94a3b8;
+}
+
 .form-grid {
   display: grid;
   gap: 16px;
