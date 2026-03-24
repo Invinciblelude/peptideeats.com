@@ -633,6 +633,10 @@ img {
   margin: 16px 0;
 }
 
+#launch-support {
+  scroll-margin-top: 96px;
+}
+
 .score-donation-split {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
